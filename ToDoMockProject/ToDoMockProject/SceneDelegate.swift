@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  ToDoMockProject
-//
-//  Created by Home on 12.11.2025.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -12,12 +5,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
         window = UIWindow(windowScene: windowScene)
-        let mainVC = MainViewController()
-        let navController = UINavigationController(rootViewController: mainVC)
-        window?.rootViewController = navController
+        
+        let mainViewController = MainRouter.createModule()
+        
+        window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
     }
 

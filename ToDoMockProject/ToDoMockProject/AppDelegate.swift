@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ToDoMockProject
-//
-//  Created by Home on 12.11.2025.
-//
-
 import UIKit
 
 @main
